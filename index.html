@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Message to WhatsApp</title>
+</head>
+
+<body>
+
+    <h2>Send me a WhatsApp Message</h2>
+    <input type="text" id="message" placeholder="Type your message here">
+    <button onclick="sendMessage()">Submit</button>
+
+    <script>
+        function sendMessage() {
+            var message = document.getElementById("message").value;
+            var phoneNumber = "8801313388345"; // Your WhatsApp number
+            var url = "https://wa.me/" + phoneNumber + "?text=" + encodeURIComponent(message);
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+
+</html>
